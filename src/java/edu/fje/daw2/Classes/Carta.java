@@ -9,9 +9,21 @@ public class Carta {
     int numero;
     String pal;
     
-    public void Carta(){
+    public Carta(){
         this.numero = 0;
         this.pal = " ";
-    } 
+    }
     
+    public Carta(int numero, String pal){
+        this.numero = numero;
+        this.pal = pal;
+    }
+    
+    public int getNumero(){
+        return this.numero;
+    }
+    
+    public String getPal(){
+        return this.pal;
+    }
 }

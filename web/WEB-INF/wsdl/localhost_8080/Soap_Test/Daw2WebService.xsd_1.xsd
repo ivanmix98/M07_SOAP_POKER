@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://daw2.fje.edu/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://daw2.fje.edu/">
+
+<xs:element name="acabarJoc" type="tns:acabarJoc"/>
+
+<xs:element name="acabarJocResponse" type="tns:acabarJocResponse"/>
+
+<xs:element name="iniciarJoc" type="tns:iniciarJoc"/>
+
+<xs:element name="iniciarJocResponse" type="tns:iniciarJocResponse"/>
+
+<xs:element name="mostrarCartes" type="tns:mostrarCartes"/>
+
+<xs:element name="mostrarCartesResponse" type="tns:mostrarCartesResponse"/>
+
+<xs:element name="moureJugador" type="tns:moureJugador"/>
+
+<xs:element name="moureJugadorResponse" type="tns:moureJugadorResponse"/>
+
+<xs:element name="obtenirCarta" type="tns:obtenirCarta"/>
+
+<xs:element name="obtenirCartaResponse" type="tns:obtenirCartaResponse"/>
+
+<xs:element name="tirarCarta" type="tns:tirarCarta"/>
+
+<xs:element name="tirarCartaResponse" type="tns:tirarCartaResponse"/>
+
+<xs:complexType name="mostrarCartes">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarCartesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:carta" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="carta">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="obtenirCarta">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenirCartaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:carta" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="acabarJoc">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="acabarJocResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tirarCarta">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="tns:carta" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tirarCartaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="moureJugador">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="xs:boolean"/>
+<xs:element name="arg2" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="moureJugadorResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="iniciarJoc">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="iniciarJocResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
